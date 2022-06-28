@@ -52,4 +52,4 @@ Other remarks/notes:
 
 - Another thing that seemed like really good idea is to add "more" button on search. I am skipping it due to time constraints + it was not defined in as requirement. I am just hinting here, that I would have consulted with the rest of team/product owner on this. I find it is important to provide access to remaining pages (search in API has limits for 10 items) and would recommend adding this.
 
-- Elephant in the room. There is no tests. I also feel a bit uneasy about it, but the scope of the app is small, setting up comprehensive testing for frontend projects (so that tests offer useful data) is a bit more complicated and most likely to be coordinated with more robust dev/prod environment setup (docker et al).
+- Elephant in the room. There is no tests. I also feel a bit uneasy about it, but the scope of the app is small, setting up comprehensive testing for frontend projects (so that tests offer useful data) is a bit more complicated and most likely to be coordinated with more robust CI/CD, dev/prod environment setup (docker et al).
