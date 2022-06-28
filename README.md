@@ -9,13 +9,13 @@ I do not find a need to have any backend/server as most operations can happen di
 - This project assumes typical x86 POSIX environment: `linux/macos/WSL2(windows)`
 - Core dependency: `npm v8.1`
 - Clone this repo using: `git clone`
-- Change dir to root of this project: `cd giant-bomb-lurker`
+- Change dir to root of this project: `cd giant-bomb-lurker/`
 
 Install dependencies:
 ```
 npm install
 ```
-Run GiantBomb proxy (todo: create docker-compose to coordinate proxy+app):
+Run GiantBomb proxy as background process (todo: create docker-compose to coordinate proxy+app):
 ```
 ./node_modules/.bin/lcp --proxyUrl https://giantbomb.com &
 ```
