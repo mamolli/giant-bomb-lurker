@@ -65,24 +65,24 @@
   }
   
   #games-flex-results {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 100%;
-	}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
-	.game-container {
-		margin: 1em;
-		padding: 2em;
-		border: 1px var(--grey) solid;
-	}
+  .game-container {
+    margin: 1em;
+    padding: 2em;
+    border: 1px var(--grey) solid;
+  }
 
-	.game-desc-flex-container {
-		display: flex;
-		width: 12em;
-	}
+  .game-desc-flex-container {
+    display: flex;
+    width: 12em;
+  }
 
-	.game-desc {
-		margin-left: 1em;
-	}
+  .game-desc {
+    margin-left: 1em;
+  }
 </style>
