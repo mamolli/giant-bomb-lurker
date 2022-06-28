@@ -1,5 +1,4 @@
 <script>
-    
   import { onMount } from 'svelte';
   import { link, navigate } from "svelte-routing"
   import { keys, length } from "ramda"
@@ -28,7 +27,6 @@
   onMount(async () => {
     searchPromiseStore.set(gb.searchGamesByString(query))
   })
-
 </script>
 
 <nav>

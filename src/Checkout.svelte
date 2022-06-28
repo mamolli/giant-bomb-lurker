@@ -3,7 +3,6 @@
   import { removeCartItem } from "./cart.js"
   import { values, isEmpty, length } from "ramda"
 
-
   let cartItems = []
 
   cartStore.subscribe(v => {

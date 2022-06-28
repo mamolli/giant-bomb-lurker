@@ -1,5 +1,5 @@
 <script>
-  import { Router, Route, link, navigate } from "svelte-routing"
+  import { Router, Route } from "svelte-routing"
   import Nav from "./Nav.svelte"
   import Listing from "./Listing.svelte"
   import Checkout from "./Checkout.svelte"
@@ -7,8 +7,6 @@
 
   export let name
   export let url = ""
-
-
 </script>
 
 <main>
