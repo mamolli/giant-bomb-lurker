@@ -10,16 +10,16 @@
   let cartItemCount = 0
   let query = new URLSearchParams(window.location.search).get('search') || ""
 
-	const search = () => {
+  const search = () => {
     searchPromiseStore.set(gb.searchGamesByString(query))
 
-		// pushing new url with query, as history state without reloading
-		if (history.pushState) {
-			const newurl = window.location.protocol + "//" + window.location.host  + `?search=${query}` // pathname skipped
-			window.history.pushState({ path : newurl }, '', newurl)
-		}
+    // pushing new url with query, as history state without reloading
+    if (history.pushState) {
+      const newurl = window.location.protocol + "//" + window.location.host  + `?search=${query}` // pathname skipped
+      window.history.pushState({ path : newurl }, '', newurl)
+    }
     navigate(`/?search=${query}`)
-	}
+  }
 
   cartStore.subscribe(v => {
     cartItemCount = length(keys(v))
@@ -43,25 +43,25 @@
 
 <style>
   nav {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: center;
-		justify-content: space-between;
-	}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-	nav form {
-		margin-left: 2em;
-		margin-right: 2em;
-	}
+  nav form {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
   #logo {
     font-weight: bold;
     font-size: 1.4em;
   }
-	#search-input {
-		width: 19em;
+  #search-input {
+    width: 19em;
     /* font-weight: bold; */
-	}
+  }
   #search-button {
     font-weight: bold;
   }

@@ -37,11 +37,11 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-		flex-wrap: nowrap;
+    flex-wrap: nowrap;
     align-items: center;
-		justify-content: left;
+    justify-content: left;
     padding: 2em;
-		border-bottom: 1px var(--grey) solid;
+    border-bottom: 1px var(--grey) solid;
     width: 32em;
   }
   .game-title {

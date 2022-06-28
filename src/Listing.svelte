@@ -21,19 +21,19 @@
 
 
 <div id="games-flex-results">
-	{#await gamesResponse}
-		loading..
-	{:then games}
-		{#each games as game}
-			<div class="game-container">
-				<div class="game-desc-flex-container">
-					<div class="game-thumb">
+  {#await gamesResponse}
+    loading..
+  {:then games}
+    {#each games as game}
+      <div class="game-container">
+        <div class="game-desc-flex-container">
+          <div class="game-thumb">
             <img alt="{game.name} - game image" src="{game.image.thumb_url}" width="100"/>
           </div>
-					<div class="game-desc">
-						{game.name}
-					</div>
-				</div>
+          <div class="game-desc">
+            {game.name}
+          </div>
+        </div>
         {#if has(game.id, cartState)}
           <button on:click={removeCartItem(game)}>
             ❌ remove from cart
@@ -45,12 +45,12 @@
           </button>
         {/if}
 
-			</div>
-		{:else}
-			No games match your search query. <br />
+      </div>
+    {:else}
+      No games match your search query. <br />
       Type game title into search bar.
-		{/each}
-	{/await}
+    {/each}
+  {/await}
 </div>
 
 <style>
