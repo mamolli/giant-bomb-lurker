@@ -9,6 +9,7 @@ I do not find a need to have any backend/server as most operations can happen di
 - This project assumes typical x86 POSIX environment: `linux/macos/WSL2(windows)`
 - Core dependency: `npm v8.1`
 - Clone this repo using: `git clone`
+- Change dir to root of this project: `cd giant-bomb-lurker`
 
 Install dependencies:
 ```
