@@ -38,7 +38,7 @@
           <button on:click={removeCartItem(game)}>
             ❌ remove from cart
           </button>
-          <div class="green-helper">Iteam was added to cart.</div>
+          <div class="green-helper">Item was added to cart.</div>
         {:else}
           <button class="add-button" on:click={addCartItem(game)}>
             🛒 add to cart
