@@ -1,4 +1,6 @@
-# Initial assumptions
+# GiantBomb Lurker
+
+## Initial assumptions
 
 The purpuse of this is to provide interactive web interface for simple operations over GiantBomb API.
 I do not find a need to have any backend/server as most operations can happen directly over GiantBomb API (although we will need reverse proxy to bypass CORS).
@@ -39,12 +41,14 @@ Styling and visual polish is kept to a minimum. This application will offer:
   - view showing search results, with possibility to add/remove item to/from cart 
   - checkout view which is a summary of the cart and button triggering alert of checkout "Processing not implemented"
 
-- Additionally we need to have a reverse proxy to bypass cors, in a perfect scenario this proxy would be customizable to take care of authentication (appending query API key), however seeking this perfect condition would create a small project on its own, so application will handle it.
+Other remarks/notes:
 
-- Since this is frontend task with limited complexity + I have Svelte framwork familiarity. I am choosing it as base for my project. Normally I would study the paths forward a bit more, most likely react/reagent/re-frame/angular would be more viable choices for the customer/company in terms of maintanance and later modifications(depending on teams & traditions of the customer/company).
+- We need to have a reverse proxy to bypass cors, in a perfect scenario this proxy would be customizable to take care of authentication (appending query API key), however seeking this perfect condition would create a small project on its own, so application will handle authentication.
 
-- The application runs with ephemeral persistence. After page reload the cart will reset. Since persistence was not required and there are several ways to prvoide it, I have chosen to skip it. Easiest path would be to keep cartState using browser's localStorage api.
+- Since this is frontend task with limited complexity and I have Svelte framwork familiarity. I am choosing it as base for my project. Normally I would study the paths forward a bit more, most likely react/reagent/re-frame/angular would be more viable choices for the customer/company in terms of maintanance and later modifications(depending on teams & traditions of the customer/company).
 
-- Another thing that seemed like really good thing to add would be "more" button on search. I am skipping it due to time constraints + it was not defined in as requirement. I am just hinting here, that I would have consulted with the rest of team/product owner on this. I find it is important to provide access to remaining pages (API has limits for 10 items) and would recommend adding this.
+- The application runs with ephemeral persistence. After page reload the cart will reset. Since persistence was not required and there are several ways to prvoide it, I have chosen to skip it. Easiest path would be to keep cartState locally using browser's localStorage api.
+
+- Another thing that seemed like really good idea is to add "more" button on search. I am skipping it due to time constraints + it was not defined in as requirement. I am just hinting here, that I would have consulted with the rest of team/product owner on this. I find it is important to provide access to remaining pages (search in API has limits for 10 items) and would recommend adding this.
 
 - Elephant in the room. There is no tests. I also feel a bit uneasy about it, but the scope of the app is small, setting up comprehensive testing for frontend projects (so that tests offer useful data) is a bit more complicated and most likely to be coordinated with more robust dev/prod environment setup (docker et al).
