@@ -24,13 +24,13 @@ Run GiantBomb proxy as background process (todo: create docker-compose to coordi
 
 Run Application, but first set GB_API_KEY value to one provided in the email. (Since it is public repo, protecting a private key seems reasonable :))
 ```
-GB_API_KEY=value_provided_via_email npm run dev
+GB_API_KEY="value_provided_via_email" npm run dev
 ```
 
 Project should be available via svelte development server (supporting auto reloads).
 *Visit using your browser* http://localhost:5555/
 
-**Remember to clean up proxy process**
+**Remember to clean up proxy process after you are finished**
 Make sure what your bg processes are, run: `jobs` and if lcp is first on the list: `kill -TERM %1`
 
 
